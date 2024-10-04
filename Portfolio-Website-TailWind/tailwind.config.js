@@ -1,14 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html"],
+  content: ["./*.{html,js}"],
   theme: {
     extend: {
       screens:{
         "sm":"480px"
       },
-      fontFamily:{
-        nunito:["Nunito", "sans-serif"]
-      },
+      spacing:{
+        "big":"48rem"
+      }
+    },
+    fontFamily:{
+      nunito:["Nunito", "sans-serif"]
     },
   },
   plugins: [],
