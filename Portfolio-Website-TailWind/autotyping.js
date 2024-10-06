@@ -108,7 +108,7 @@ var AutoTyping = function(e) {
     }
   }]).default;
 
-  const exampleText = ['Developer', 'Designer', 'Operations Expert', 'Executive Assistant'];
+  const exampleText = ['Developer...', 'Designer...', 'Operations Expert...', 'Executive Assistant'];
   const exampleTyping = new AutoTyping('#text', exampleText, {
       typeSpeed: 100,
       deleteSpeed: 100,
