@@ -10,7 +10,7 @@
     <title>TailWind Portfolio</title>
 </head>
 <body class="font-nunito">
-    <div class="h-screen lg:h-[700px] bg-gradient-to-t from-purple-200 relative overflow-hidden">
+    <div id="#homepage" class="h-screen lg:h-[700px] bg-gradient-to-t from-purple-200 relative overflow-hidden">
         <!-- navbar -->
         <nav class="w-full fixed top-0 bg-white z-10">
             <div class="container mx-auto py-5 flex items-center justify-between">
@@ -20,19 +20,19 @@
                 </div>
                 <ul class="hidden md:flex space-x-10 text-gray-600 font-bold text-sm uppercase">
                     <li class="hover:text-gray-500">
-                        <a href="#">homepage</a>
+                        <a href="#homepage">homepage</a>
                     </li>
                     <li class="hover:text-gray-500">
-                        <a href="#">about me</a>
+                        <a href="#about">about me</a>
                     </li>
                     <li class="hover:text-gray-500">
-                        <a href="#">services</a>
+                        <a href="#services">services</a>
                     </li>
                     <li class="hover:text-gray-500">
-                        <a href="#">works</a>
+                        <a href="#works">works</a>
                     </li>
                     <li class="hover:text-gray-500">
-                        <a href="#">contact</a>
+                        <a href="#contact">contact</a>
                     </li>
                 </ul>
                 <img class="hidden md:block w-5 cursor-pointer" src="./img/moon.png"  alt="">
@@ -43,43 +43,45 @@
                 </div> 
                 <ul id="menu" class="hidden bg-purple-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center justify-center">
                     <li>
-                        <a href="#">homepage</a>
+                        <a id="aLink" href="#homepage">homepage</a>
                     </li>
                     <li>
-                        <a href="#">about me</a>
+                        <a id="aLink" href="#about">about me</a>
                     </li>
                     <li>
-                        <a href="#">services</a>
+                        <a id="aLink" href="#services">services</a>
                     </li>
                     <li>
-                        <a href="#">works</a>
+                        <a id="aLink" href="#works">works</a>
                     </li>
                     <li>
-                        <a href="#">contact</a>
+                        <a id="aLink" href="#contact">contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <!-- intro content -->
         <!-- image -->
-        <img class="absolute bottom-0 right-0 lg:left-0 mx-auto  h-4/6 lg:h-5/6 object-cover" src="./img/woman1.png" alt="">
-        <!-- circle -->
-        <div class="hidden md:block absolute -bottom-1/4 right-0 left-0 mx-auto w-big h-big bg-purple-900 rounded-full -z-10"></div>
-        <!-- animated text -->
-        <div class="absolute top-1/3 left-5 text-xl sm:left-10 sm:text-4xl md:left-104 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl font-bold">
-            <span class="text-gray-600">Freelance</span>
-            <p id="text" class="text-red-500"></p>
-        </div>
-        <!-- other text -->
-        <div class="hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 m-auto right-10 p-6 bg-white h-fit w-1/3">
-            <h1 class="text-4xl font-bold text-purple-900">Hi, I am Chris</h1>
-            <p class="text-gray-400">I am a skilled Developer, Designer, Operations Expert, and Executive Assistant, blending technical expertise, creative design, and strategic operations to deliver efficient solutions and seamless project management across various industries.</p>
-
-            <a class=" bg-purple-800 text-white text-xl px-3 py-2 w-fit rounded-md font-semibold" href="#contact">Hire me</a>
+        <div>
+            <img class="absolute bottom-0 right-0 lg:left-0 mx-auto  h-4/6 lg:h-5/6 object-cover" src="./img/woman1.png" alt="">
+            <!-- circle -->
+            <div class="hidden md:block absolute -bottom-1/4 right-0 left-0 mx-auto w-big h-big bg-purple-900 rounded-full -z-10"></div>
+            <!-- animated text -->
+            <div class="absolute top-1/3 left-5 text-xl sm:left-10 sm:text-4xl md:left-104 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl font-bold">
+                <span class="text-gray-600">Freelance</span>
+                <p id="text" class="text-red-500"></p>
+            </div>
+            <!-- other text -->
+            <div class="hidden lg:flex flex-col g rounded-md shadow-lg absolute top-0 bottom-0 m-auto right-10 p-6 bg-white h-fit w-1/3">
+                <h1 class="text-4xl font-bold text-purple-900">Hi, I am Chris</h1>
+                <p class="text-gray-400">I am a skilled Developer, Designer, Operations Expert, and Executive Assistant, blending technical expertise, creative design, and strategic operations to deliver efficient solutions and seamless project management across various industries.</p>
+                
+                <a class=" bg-purple-800 text-white text-xl px-3 py-2 w-fit rounded-md font-semibold" href="#contact">Hire me</a>
+            </div>
         </div>
     </div>
     <!-- about page -->
-    <div class="px-10">
+    <div id="about" class="px-10">
         <div class="container mx-auto py-40 flex flex-col-reverse lg:flex-row items-center gap-20">
             <!-- left -->
             <div class="relative w-full flex justify-center">
@@ -112,16 +114,127 @@
         </div>
     </div>
     <!-- services -->
-    <div>
+    <div id="services">
             <div class="container mx-auto">
                 <!-- top -->
                 <div class="flex flex-col gap-3 items-center">
                     <h1 class="text-purple-600 font-bold">SERVICES</h1>
                     <h1 class="text-3xl font-bold">What do I offer?</h1>
+                    <p class="w-1/2 text-center text-gray-400">
+                        I am a skilled Developer, Designer, Operations Expert, and Executive Assistant, blending technical expertise, creative design, and strategic operations to deliver efficient solutions and seamless project management across various industries.                    </p>
+                </div>
+                <div class="p-5 sm:p-0 flex flex-wrap">
+                    <!-- cards -->
+                    <div class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10flex flex-col gap-3">
+                        <img class="w-10" src="./img/icon.png" alt="">
+                        <h1 class="font-medium text-lg">UI / UX Design</h1>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.</p>
+                        <a class="text-purple-600 font-semibold text-sm" href="#">Read More</a>
+                    </div>
+                    <div class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10flex flex-col gap-3">
+                        <img class="w-10" src="./img/icon.png" alt="">
+                        <h1 class="font-medium text-lg">UI / UX Design</h1>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.</p>
+                        <a class="text-purple-600 font-semibold text-sm" href="#">Read More</a>
+                    </div>
+                    <div class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10flex flex-col gap-3">
+                        <img class="w-10" src="./img/icon.png" alt="">
+                        <h1 class="font-medium text-lg">UI / UX Design</h1>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.</p>
+                        <a class="text-purple-600 font-semibold text-sm" href="#">Read More</a>
+                    </div>
+                    <div class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10flex flex-col gap-3">
+                        <img class="w-10" src="./img/icon.png" alt="">
+                        <h1 class="font-medium text-lg">UI / UX Design</h1>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.</p>
+                        <a class="text-purple-600 font-semibold text-sm" href="#">Read More</a>
+                    </div>
+                    <div class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10flex flex-col gap-3">
+                        <img class="w-10" src="./img/icon.png" alt="">
+                        <h1 class="font-medium text-lg">UI / UX Design</h1>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.</p>
+                        <a class="text-purple-600 font-semibold text-sm" href="#">Read More</a>
+                    </div>
+                    <div class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10flex flex-col gap-3">
+                        <img class="w-10" src="./img/icon.png" alt="">
+                        <h1 class="font-medium text-lg">UI / UX Design</h1>
+                        <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla.</p>
+                        <a class="text-purple-600 font-semibold text-sm" href="#">Read More</a>
+                    </div>
                 </div>
             </div>
             <!-- bottom -->
     </div>
+     <!-- Works -->
+    <div id="works">
+        <div class="container mx-auto py-32">
+            <!-- top -->
+            <div class="flex flex-col gap-3 items-center">
+                <h1 class="text-purple-600 font-bold">PORTFOLIO</h1>
+                <h1 class="text-3xl font-bold">Works & Projects</h1>
+                <p class="w-1/2 text-center text-gray-400">
+                    Christine Wavua's work spans across web development, design, and operations, focusing on creating efficient digital solutions and streamlining workflows. From building user-friendly websites with modern frameworks to optimizing business systems, her projects reflect a commitment to innovation, creativity, and operational excellence.                </div>
+            <div class="p-5 sm:p-0 flex flex-wrap justify-center">
+                <!-- cards -->
+                <div class="w-full md:w-4/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+                <div class="w-full md:w-4/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+                <div class="w-full md:w-4/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+                <div class="w-full md:w-4/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+                <div class="w-full md:w-4/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+                <div class="w-full md:w-4/12 lg:w-1/5 shadow-xl rounded-lg my-3 md:my-10 m-5">
+                    <img src="./img/item.png" alt="">
+                </div>
+        </div>
+    </div>
+        <!-- bottom -->
+        <!-- contact -->
+    <div id="contact">
+        <div class="container mx-auto">
+            <!-- top -->
+            <div class="flex flex-col gap-3 items-center">
+                <h1 class="text-purple-600 font-bold">CONTACT</h1>
+                <h1 class="text-3xl font-bold">Have a Question?</h1>
+                <p class="w-1/2 text-center text-gray-400">
+                    I am a skilled Developer, Designer, Operations Expert, and Executive Assistant, blending technical expertise, creative design, and strategic operations to deliver efficient solutions and seamless project management across various industries.                    </p>
+            </div>
+            <!-- bottom -->
+            <form class="mt-5 p-8 flex flex-col gap-5 items-center" action="">
+                <input class="p-2 w-full md:w-1/2 ring-1 ring-purple-300 rounded-sm" type="text" placeholder="Name Surname">
+                <input class="p-2 w-full md:w-1/2 ring-1 ring-purple-300 rounded-sm" type="text" placeholder="email">
+                <textarea class="p-2 w-full md:w-1/2 ring-1 ring-purple-300 rounded-sm" cols="30" rows="10" placeholder="Message"></textarea>
+                <button class="w-1/2 bg-purple-600 text-white font-medium px-3 py-2 rounded-md cursor-pointer">Submit</button>
+            </form>
+        </div>
+    </div>
+        <!-- footer -->
+    <div>
+        <div class="w-full bg-gray-800">
+            <div class="container mx-auto py-5 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <img class="w-8" src="./img/logo-white.png" alt="">
+                    <span class="text-2xl font-bold text-white">Codetronn.</span>
+                </div>
+                <span class="hidden md:block font-medium text-white">© 2024 Codetronn. Designed with 💕 Christine Wavua</span>
+                <div class="flex gap-2">
+                    <img class="w-4 cursor-pointer" src="./img/facebook.png" alt="">
+                    <img class="w-4 cursor-pointer" src="./img/instagram.png" alt="">
+                    <img class="w-4 cursor-pointer" src="./img/twitter.png" alt="">
+                    <img class="w-4 cursor-pointer" src="./img/linkedin.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <script src="./app.js"></script>
     <script src="./autotyping.js"></script>
 </body>
