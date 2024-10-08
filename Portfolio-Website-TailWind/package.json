@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "build": "tailwindcss build input.css -o css/styles.css"
+  },
   "devDependencies": {
     "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47"
   }
 }
