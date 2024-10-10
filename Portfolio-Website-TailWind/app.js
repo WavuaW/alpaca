@@ -65,17 +65,17 @@ window.addEventListener('click', (e) => {
     }
 });
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+// document.getElementById('contact-form').addEventListener('submit', function(event) {
+//     event.preventDefault(); // Prevent the default form submission
 
-    // Send the email using EmailJS
-    emailjs.sendForm('service_531fc9g', 'template_wa7lz6t', this)
-        .then(function() {
-            alert('Email sent successfully!');
-        }, function(error) {
-            alert('Failed to send email: ' + JSON.stringify(error));
-        });
-});
+//     // Send the email using EmailJS
+//     emailjs.sendForm('service_531fc9g', 'template_wa7lz6t', this)
+//         .then(function() {
+//             alert('Email sent successfully!');
+//         }, function(error) {
+//             alert('Failed to send email: ' + JSON.stringify(error));
+//         });
+// });
 
 
 // // Function to update the logo based on dark mode

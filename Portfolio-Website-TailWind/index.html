@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/logo-white.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -228,7 +229,7 @@
                 <input class="p-2 w-full md:w-1/2 ring-1 ring-purple-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white" type="text" name="name" placeholder="Name Surname" required>
                 <input class="p-2 w-full md:w-1/2 ring-1 ring-purple-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white" type="email" name="email" placeholder="Email" required>
                 <textarea class="p-2 w-full md:w-1/2 ring-1 ring-purple-300 rounded-sm dark:bg-slate-800 dark:ring-0 dark:text-white" name="message" cols="30" rows="10" placeholder="Message" required></textarea>
-                <button class="w-1/2 bg-purple-600 text-white font-medium px-3 py-2 rounded-md cursor-pointer" type="submit">Submit</button>
+                <button class="w-1/2 bg-purple-600 text-white font-medium px-3 py-2 rounded-md cursor-pointer" type="submit" value="Send">Submit</button>
             </form>
         </div>
     </div>
@@ -267,11 +268,28 @@
 </div>
     <script src="./app.js"></script>
     <script src="./autotyping.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-    (function() {
-        emailjs.init("aBSlDbbtBRP8B5UOG"); // Replace with your EmailJS user ID
-    })();
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "aBSlDbbtBRP8B5UOG",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
     </script>
 </body>
 </html>
