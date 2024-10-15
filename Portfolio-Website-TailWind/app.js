@@ -65,7 +65,7 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// document.getElementById('contact-form').addEventListener('submit', function(event) {
+// document.getElementById('contact-form')  .addEventListener('submit', function(event) {
 //     event.preventDefault(); // Prevent the default form submission
 
 //     // Send the email using EmailJS
