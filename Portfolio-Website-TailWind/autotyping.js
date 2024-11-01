@@ -116,3 +116,4 @@ var AutoTyping = function(e) {
       waitBetweenWords: 500,
   });
   exampleTyping.start()
+  
